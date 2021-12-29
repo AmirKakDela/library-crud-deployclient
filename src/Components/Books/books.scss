@@ -1,0 +1,154 @@
+.table {
+  border: 1px solid #eee;
+  table-layout: fixed;
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 5px;
+
+  th {
+    font-weight: 700;
+    padding: 17px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  td {
+    font-weight: 500;
+    padding: 10px 10px;
+    border: 1px solid #eee;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:last-child {
+      span {
+        font-size: 20px;
+        transition: 0.1s color ease-in-out;
+        margin-right: 10px;
+
+        &:hover {
+          color: #3e8bb4;
+        }
+      }
+    }
+  }
+
+  tbody tr:nth-child(odd) {
+    background: #fff;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #F7F7F7;
+  }
+}
+
+.action {
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.button {
+  padding: 5px 10px;
+  font-weight: 700;
+  color: black;
+  border: none;
+  background-color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .25s all ease-in-out;
+
+  &:hover {
+    background-color: #676262;
+    color: white;
+  }
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  background-color: #e0dddd;
+  padding: 15px;
+
+  label {
+    color: black;
+    font-weight: 500;
+  }
+
+  &__input {
+    display: block;
+    padding: 10px;
+    border: none;
+    width: 300px;
+    margin-top: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  select.form__input {
+    font-weight: 500;
+    font-size: 15px;
+    option {
+      font-weight: 500;
+    }
+  }
+
+
+
+  .button {
+    margin-top: 10px;
+    width: 300px;
+    background-color: #676262;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: #676262;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: #8d8a8a;
+      color: #cecccc;
+
+      &:hover {
+        background-color: #8d8a8a;
+        color: #cecccc;
+      }
+    }
+  }
+
+  &__error-text {
+    color: red;
+    font-weight: 500;
+    margin-top: -10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  .table {
+    font-size: 14px;
+
+    th {
+      padding: 10px 5px;
+    }
+
+    td {
+      padding: 5px 10px;
+    }
+  }
+}
+
